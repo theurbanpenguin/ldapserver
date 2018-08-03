@@ -1,0 +1,7 @@
+dn: dc=tup,dc=com
+objectClass: domain
+dc: tup
+
+dn: cn=admin,dc=tup,dc=com
+objectClass: organizationalRole
+cn: admin

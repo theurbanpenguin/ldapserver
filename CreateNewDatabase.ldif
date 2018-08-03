@@ -1,0 +1,14 @@
+dn: olcDatabase=mdb,cn=config
+objectClass: olcDatabaseConfig
+objectClass: olcMdbConfig
+olcDatabase: mdb
+olcSuffix: dc=tup,dc=com
+olcDbDirectory: /var/lib/ldap/tup
+olcRootDN: cn=admin,dc=tup,dc=com
+olcRootPW: Password1
+olcDbIndex: uid eq
+olcDbIndex: cn,sn eq
+olcDbIndex: objectClass eq
+olcAccess: to attrs=userPassword by self write by anonymous auth by * none
+olcAccess: to attrs=shadowLastChange by self write by * read
+olcAccess: to * by * read
