@@ -1,0 +1,4 @@
+dn: cn=ldapadmins,ou=groups,dc=example,dc=com
+objectClass: posixGroup
+cn: ldapadmins
+gidNumber: 4001

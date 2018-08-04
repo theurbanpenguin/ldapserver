@@ -1,0 +1,14 @@
+dn: cn=jane,ou=people,dc=example,dc=com
+cn: jane
+givenName: jane
+gidNumber: 4000
+homeDirectory: /home/jane
+sn: jones
+loginShell: /bin/bash
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: top
+#Password = Password1
+userPassword: {SSHA}YXFfxNKsBfEpDLgB5qC5eEZIMiH+YmwQ
+uidNumber: 4001
+uid: jane
