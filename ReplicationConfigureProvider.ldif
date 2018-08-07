@@ -12,6 +12,7 @@ olcModuleLoad: accesslog
 # an additional database
 # Create the directory FIRST!! sudo -u openldap mkdir /var/lib/ldap/accesslog
 dn: olcDatabase={3}mdb,cn=config
+changetype: add
 objectClass: olcDatabaseConfig
 objectClass: olcMdbConfig
 olcDatabase: {3}mdb
@@ -40,6 +41,7 @@ olcSpNoPresent: TRUE
 
 # accesslog overlay definitions for primary db
 dn: olcOverlay=accesslog,olcDatabase={1}mdb,cn=config
+changetype: add
 objectClass: olcOverlayConfig
 objectClass: olcAccessLogConfig
 olcOverlay: accesslog

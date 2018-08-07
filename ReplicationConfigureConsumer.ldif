@@ -1,0 +1,15 @@
+dn: cn=module{0},cn=config
+changetype: modify
+add: olcModuleLoad
+olcModuleLoad: syncprov
+
+dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+add: olcSyncRepl
+olcSyncRepl: rid=0 provider=ldap://ldap1.example.com bindmethod=simple binddn="cn=admin,dc=example,dc=com"
+  credentials=Password1 searchbase="dc=example,dc=com" logbase="cn=accesslog"
+  logfilter="(&(objectClass=auditWriteObject)(reqResult=0))" schemachecking=on
+  type=refreshAndPersist retry="60 +" syncdata=accesslog
+-
+add: olcUpdateRef
+olcUpdateRef: ldap://ldap1.example.com
